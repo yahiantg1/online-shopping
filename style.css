@@ -1,0 +1,146 @@
+:root{
+    --main-color:navy;
+    --second-color:#D4C9BE;
+    --text-color: black;
+}
+
+*{
+    margin:0;
+    padding :0;
+    box-sizing:border-box;
+}
+
+body{
+    background-image: url(imgs/7.jpg);
+    background-size: cover;
+    background-position: center;        
+    background-attachment: fixed;
+}
+
+header{
+background-color:var(--second-color);
+display:flex;
+justify-content:space-between;
+padding :20px;
+align-items:center;
+width: 100%;
+position:sticky;
+top:0;
+}
+
+
+nav a{
+    text-decoration:none;
+    color:var(--text-color);
+    margin:10px;
+    font-size:20px;
+}
+
+nav i{
+    transition:0.5s;
+}
+
+nav i:hover{
+    transform:rotate(45deg);
+}
+
+.title{
+    text-align:center;
+    color:var(--second-color);
+    margin:30px;
+}
+
+
+.product{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    padding:20px;
+}
+
+.card{
+    background-color: var(--second-color);
+    text-align:center;
+    border-radius:10px;
+    box-shadow :0 0 10px rgba(212, 208, 208, 0.918);
+    padding:20px;
+}
+.card img{
+    height: 280px;
+    object-fit:fill;
+    width:100%;
+    transition:0.5s;
+}
+.card img:hover{
+    transform: scale(1.05);
+}
+.card p{
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+button {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 15px;
+}
+
+button:hover {
+    background-color:rgba(0, 0, 128, 0.345)
+}
+ footer{
+    background-color:var(--second-color);
+    text-align:center;
+    padding:20px;
+ }
+ .social{
+    margin-top: 20px;
+ }
+
+ .social i{
+    font-size: 20px;
+    transition: 0.5s;
+ }
+  .social i:hover{
+    transform:skew(20deg);
+    color:rgba(0, 0, 128, 0.345)
+}
+
+@media(max-width:600px){
+    .product{
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    padding:15px;
+}
+
+}
+
+
+
+
+
+
+
+
+  /* Responsive Design */
+@media (max-width: 600px) {
+    .product {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card img{
+        height: 180px;;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+}
